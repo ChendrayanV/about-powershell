@@ -1,2 +1,0 @@
-# about-powershell
-about-powershell
