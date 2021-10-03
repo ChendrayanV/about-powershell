@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "http://about-powershell.com"
+baseURL = "https://jolly-ardinghelli-b9b44f.netlify.app/"
 title = "about-powershell"
 theme = "meghna-hugo"
 themesDir = "themes/"
