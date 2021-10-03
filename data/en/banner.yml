@@ -1,11 +1,11 @@
 ############################### Banner ################################
 banner:
   enable : true
-  bg_image_webp : "images/backgrounds/hero-area.webp"
-  bg_image : "images/backgrounds/hero-area.jpg"
+  bg_image_webp : "images/backgrounds/bg-banner-home.webp"
+  bg_image : "images/backgrounds/bg-banner-home.jpg"
   icon : "" # themify icon pack : https://themify.me/themify-icons
   title : "Chendrayan Venkatesan"
-  content : "MVP | MCTS | MCP | ITIL V3"
+  # content : "Views are of my own..."
   button:
     enable : true
     label : "Blog"
