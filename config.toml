@@ -10,7 +10,7 @@ summaryLength = "15"
 # disqus short name
 # disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
-# disableLanguages = ["fr"]
+disableLanguages = ["fr"]
 
 ############################# Plugins ##########################
 # css plugins
@@ -119,10 +119,10 @@ name = "contact"
 url = "#contact"
 weight = 7
 
-[[Languages.fr.menu.main]]
-name = "themefisher"
-url = "https://themefisher.com/"
-weight = 8
+# [[Languages.fr.menu.main]]
+# name = "themefisher"
+# url = "https://themefisher.com/"
+# weight = 8
 
 ############################# Default Parameters ##########################
 [params]
