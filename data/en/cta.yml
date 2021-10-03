@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable : true
+  bg_image : "images/backgrounds/bg-home-page.jpg"
+  bg_image_webp : "images/backgrounds/bg-home-page.webp"
+  title : "Azure | PowerShell | Automation"
+  content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+  button:
+    enable : false
+    label : "Start a project with us"
+    link : "#contact"
