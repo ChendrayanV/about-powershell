@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://about-powershell.com"
+baseURL = "http://about-powershell.com"
 title = "about-powershell"
 theme = "meghna-hugo"
 themesDir = "themes/"
