@@ -8,9 +8,9 @@ paginate = "6"
 # post excerpt
 summaryLength = "15"
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+# disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
-disableLanguages = ["fr"]
+# disableLanguages = ["fr"]
 
 ############################# Plugins ##########################
 # css plugins
