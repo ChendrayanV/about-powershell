@@ -1,5 +1,10 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
+thumbnailImagePosition: left
+thumbnailImage: 
+coverImage: 
+metaAlignment: center
+coverMeta: out
 date: {{ .Date }}
 categories:
 - category
