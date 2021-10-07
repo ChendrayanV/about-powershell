@@ -2,7 +2,7 @@
 title: "Azure Devops Pipeline to Send Files Through Email With No Marketplace Extension"
 thumbnailImagePosition: "top"
 thumbnailImage: images/Blog01.jpg
-coverImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+coverImage: images/Blog01.jpg
 metaAlignment: center
 coverMeta: out
 date: 2021-10-07T15:11:31+05:30
