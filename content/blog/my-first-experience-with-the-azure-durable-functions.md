@@ -1,7 +1,7 @@
 +++
 author = "Chendrayan Venkatesan"
 categories = ["Azure"]
-tags = ["Azure Function" , "Durable", "C#"]
+tags = ["Azure Function" , "Durable", "C-Sharp"]
 date = "2020-06-28"
 description = ""
 featured = "Sand-Clock.jpg"
