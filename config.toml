@@ -348,7 +348,7 @@ disableLanguages        = []
   medium                = ""
   # Professional/Business Oriented Communities
   linkedin              = "chendrayanv"
-  # linkedin_company      = "examplebusiness"
+  linkedin_company      = "collabrains-techserve-federation"
   foursquare            = ""
   xing                  = ""
   slideshare            = ""
