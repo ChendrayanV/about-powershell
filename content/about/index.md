@@ -1,17 +1,25 @@
-title = "Chendrayan Venkatesan"
-description = "MVP | MCTS | MCP | ITIL V3 (foundation)"
-date = "2014-04-09"
-
++++
+title = "About"
+description = "Hugo, the world’s fastest framework for building websites"
+author = "Hugo Authors"
+date = "2019-02-28"
+layout = "about"
 +++
 
-{{< youtube 1Su-xkSJQOk >}}
+Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
 
-Chendrayan Venkatesan (a.k.a Chen V) is a multi-year Microsoft MVP award recipient in the stream of Cloud and Datacenter Management (PowerShell). He works at Shell India Markets Private Limited as a Cloud Automation Engineer. Automation, Workflows, Integrations, Orchestrations, and Microsoft Technologies are his interests. His focus is to transform the organization model to achieve key business objectives such as enhanced customer focus, seamless end-to-end management, and integrated service capability. 
-Chen V is a published author of “Windows PowerShell 5.0 for .NET developers (Second Edition)”. In 2017, he joined aMS (formerly Azure Microsoft365 & SharePoint ) community as India’s brand ambassador. You can find him at PowerShell, Azure, and Microsoft 365 community events.
+Hugo makes use of a variety of open source projects including:
 
-*User Group Member & Volunteer*
+* https://github.com/yuin/goldmark
+* https://github.com/alecthomas/chroma
+* https://github.com/muesli/smartcrop
+* https://github.com/spf13/cobra
+* https://github.com/spf13/viper
 
-1. Bangalore IT Pro User Group.
-2. Bangalore & Chennai Azure User Group.
-3. SharePoint Saturday Bangalore.
+Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
 
+Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+
+Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+
+Learn more and contribute on [GitHub](https://github.com/gohugoio).

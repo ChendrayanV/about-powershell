@@ -32,7 +32,7 @@ disableLanguages        = []
   readingTime           = true
   imageStretch          = ""
   removeBlur            = false
-  socialShare           = ["twitter", "facebook", "linkedin","email"]
+  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
   hideEmptyStats        = false
 
   [params.meta]
@@ -45,7 +45,7 @@ disableLanguages        = []
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "Automation"
+    navbarTitle         = "Future Imperfect"
     dynamicTitles       = true
     searchMenu          = true
     shareMenu           = true
@@ -53,7 +53,7 @@ disableLanguages        = []
 
   [params.intro]
     header                = "Chendrayan Venkatesan"
-    paragraph             = "MVP | MCTS | MCP | ITIL"
+    paragraph             = "sdsd"
     rssIntro              = true
     socialIntro           = true
     hideWhenSingleColumn  = false
@@ -63,10 +63,10 @@ disableLanguages        = []
       src                 = "img/main/ChenV.jpg"
       shape               = "circle"
       width               = ""
-      alt                 = "Chen V"
+      alt                 = "iAutomate"
 
   [params.sidebar]
-    about               = "Chendrayan Venkatesan (a.k.a Chen V) is a multi-year Microsoft MVP award recipient..."
+    about               = "This theme was developed for Hugo static site generator."
     postAmount          = 5
     categories          = true
     categoriesByCount   = true
@@ -355,27 +355,27 @@ disableLanguages        = []
   # Social Networks
   facebook              = "chendrayanv"
   googleplus            = ""
-  #reddit                = "example"
+  # reddit                = "example"
   quora                 = ""
   youtube               = ""
   vimeo                 = ""
-  whatsapp              = "+919620178698"
+  # whatsapp              = "" # WhatsApp Number
     # WeChat and QQ need testing.
     wechat              = ""
     qq                  = "" # User ID Number
   # instagram             = "example"
-  # tumblr                = ""
+  tumblr                = ""
   twitter               = "chendrayanv"
   strava                = ""
-  skype                 = "chendrayan.venkatesan"
+  skype                 = ""
   snapchat              = ""
   # pinterest             = "example"
-  telegram              = "+919620178698"
+  # telegram              = "example"
   vine                  = ""
   googlescholar         = ""
   orcid                 = ""
   # researchgate          = "example"
   # keybase               = "example"
-  # mastodon              = "example.com/@example"
+  mastodon              = "example.com/@example"
   # Email
   email                 = "chendrayan.exchange@hotmail.com"

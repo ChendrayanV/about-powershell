@@ -1,16 +1,21 @@
 +++
-author = "Chendrayan Venkatesan"
-categories = ["Azure" , "Azure DevOps" , "PSWriteWord"]
-date = "2020-07-19"
-linktitle = ""
-featured = ""
-featuredpath = "date"
-featuredalt = ""
 title = "azure devops pipeline to send files through email with no marketplace extension"
 description = ""
-type = "post"
-draft = "false"
-
+author = "Chendrayan Venkatesan"
+date = "2020-07-19"
+tags = ["ChenV" , "Azure" , "PSWriteWord" , "Azure DevOps"]
+categories = ["Azure" , "Azure DevOps" , "PSWriteWord"]
+[[images]]
+  src = "img/2020/07/Charts.jpg"
+  alt = "Mountain Range Through Clouds"
+  stretch = "horizontal"
+[[images]]
+  src = "img/2020/07/Charts.jpg"
+  alt = "Desert Scene"
+[[images]]
+  src = "img/2020/07/Charts.jpg"
+  alt = "Valley"
+  stretch = "horizontal"
 +++
 
 ## Introduction
@@ -53,6 +58,7 @@ Add-WordText -WordDocument $WordDocument -Text "Virtual Machines" -HeadingType H
 Add-WordBarChart -WordDocument $WordDocument -ChartName "Virtual Machines by Location" -Names $($virtualMachines.location) -Values $($virtualMachines.count_) -NoLegend
 #endregion
 ```
+
 > Storage Accounts (Count by Location)
 ```powershell
 #region
