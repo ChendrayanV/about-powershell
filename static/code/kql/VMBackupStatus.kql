@@ -1,0 +1,14 @@
+RecoveryServicesResources
+| where type =~ 'microsoft.recoveryservices/vaults/backupfabrics/protectioncontainers/protecteditems'
+| where properties.backupManagementType =~ 'AzureIaasVM'
+| project id, SubscriptionId = subscriptionId, VMName = tostring(properties.friendlyName), 
+    LastRecoveryPoint = tostring(properties.lastRecoveryPoint), 
+    PolicyName = tostring(properties.policyName), 
+    ProtectionStatus = tostring(properties.protectionStatus), 
+    CurrentProtectionState = tostring(properties.currentProtectionState),
+    BackupId = tostring(properties.id),
+    IsBackedUp = isnotempty(id),
+    recoveryServiceVault = split(id, '/')[8]
+
+
+

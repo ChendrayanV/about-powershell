@@ -1,0 +1,4 @@
+RecoveryServicesResources
+| where type =~ 'Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems'
+| project id, name, virtualMachineId = toupper(properties.virtualMachineId)
+
