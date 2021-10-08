@@ -7,15 +7,8 @@ tags = ["ChenV" , "Azure" , "PSWriteWord" , "Azure DevOps"]
 categories = ["Azure" , "Azure DevOps" , "PSWriteWord"]
 [[images]]
   src = "img/2020/07/Charts.jpg"
-  alt = "Mountain Range Through Clouds"
-  stretch = "horizontal"
-[[images]]
-  src = "img/2020/07/Charts.jpg"
-  alt = "Desert Scene"
-[[images]]
-  src = "img/2020/07/Charts.jpg"
-  alt = "Valley"
-  stretch = "horizontal"
+  alt = "Charts"
+
 +++
 
 ## Introduction

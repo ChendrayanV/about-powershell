@@ -10,5 +10,4 @@ removeBlur = false
 [[images]]
   src = ""
   alt = ""
-  stretch = ""
 +++
