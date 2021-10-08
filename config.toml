@@ -2,7 +2,7 @@
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
 baseurl                 = "https://about-powershell.com"
 DefaultContentLanguage  = "en"
-title                   = "Hugo Future Imperfect Slim"
+title                   = "iAutomate"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = ""
@@ -332,7 +332,7 @@ disableLanguages        = []
 
 [social]
   # Coding Communities
-  github                = "pacollins/hugo-future-imperfect-slim"
+  github                = "chendrayanv"
   gitlab                = ""
   stackoverflow         = "" # User Number
   bitbucket             = ""
@@ -340,42 +340,42 @@ disableLanguages        = []
   codepen               = ""
   # Visual Art Communities
   deviantart            = ""
-  flickr                = "example"
+  # flickr                = "example"
   behance               = ""
   dribbble              = ""
   # Publishing Communities
   wordpress             = ""
   medium                = ""
   # Professional/Business Oriented Communities
-  linkedin              = "example"
-  linkedin_company      = "examplebusiness"
+  linkedin              = "chendrayanv"
+  # linkedin_company      = "examplebusiness"
   foursquare            = ""
   xing                  = ""
   slideshare            = ""
   # Social Networks
-  facebook              = "example"
+  facebook              = "chendrayanv"
   googleplus            = ""
-  reddit                = "example"
+  #reddit                = "example"
   quora                 = ""
   youtube               = ""
   vimeo                 = ""
-  whatsapp              = "" # WhatsApp Number
+  whatsapp              = "+919620178698"
     # WeChat and QQ need testing.
     wechat              = ""
     qq                  = "" # User ID Number
-  instagram             = "example"
-  tumblr                = ""
-  twitter               = "example"
+  # instagram             = "example"
+  # tumblr                = ""
+  twitter               = "chendrayanv"
   strava                = ""
   skype                 = ""
   snapchat              = ""
-  pinterest             = "example"
-  telegram              = "example"
+  # pinterest             = "example"
+  telegram              = "+919620178698"
   vine                  = ""
   googlescholar         = ""
   orcid                 = ""
-  researchgate          = "example"
-  keybase               = "example"
-  mastodon              = "example.com/@example"
+  # researchgate          = "example"
+  # keybase               = "example"
+  # mastodon              = "example.com/@example"
   # Email
-  email                 = "example"
+  email                 = "chendrayan.exchange@hotmail.com"
