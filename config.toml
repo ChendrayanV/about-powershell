@@ -1,6 +1,6 @@
 # For a description of these parameters, please visit the theme wiki.
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
-baseurl                 = "htpps://about-powershell.com"
+baseurl                 = "https://about-powershell.com"
 DefaultContentLanguage  = "en"
 title                   = "iAutomate"
 theme                   = "hugo-future-imperfect-slim"
@@ -32,7 +32,7 @@ disableLanguages        = []
   readingTime           = true
   imageStretch          = ""
   removeBlur            = false
-  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
+  socialShare           = ["twitter", "facebook", "linkedin","email"]
   hideEmptyStats        = false
 
   [params.meta]
@@ -367,7 +367,7 @@ disableLanguages        = []
   # tumblr                = ""
   twitter               = "chendrayanv"
   strava                = ""
-  skype                 = ""
+  skype                 = "chendrayan.venkatesan"
   snapchat              = ""
   # pinterest             = "example"
   telegram              = "+919620178698"
