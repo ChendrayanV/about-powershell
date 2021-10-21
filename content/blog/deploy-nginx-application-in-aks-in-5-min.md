@@ -67,7 +67,7 @@ HTML file content for your reference.
 PS C:\> kubectl run collabrains-cloud-dev --image chenv/collabrains-cloud-dev
 ```
 
-### Expose the application to internter using Load Balancer service 
+### Expose the application to internet using Load Balancer service 
 
 ```PowerShell 
 PS C:\> kubectl expose pod collabrains-cloud-dev --type=LoadBalancer --port=80 --name=collabrains-cloud-dev
