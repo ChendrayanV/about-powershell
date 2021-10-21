@@ -1,5 +1,5 @@
 +++
-title = "deploy-a-new-version-of-the-application-in-aks-(less-than-5-min)"
+title = "Deploy a new version of the application in AKS (Less than 5 min)"
 description = ""
 author = "Chendrayan Venkatesan"
 date = "2021-10-21"
