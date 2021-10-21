@@ -1,19 +1,21 @@
 +++
-title = "Deploy NGINX application in AKS in 5 min"
+title = "Deploy NGINX application in AKS (Less than 5 min)"
 description = ""
 author = "Chendrayan Venkatesan"
 date = "2021-10-21"
 tags = ["AKS","NGINX"]
 categories = ["Azure" , "AKS"]
 [[images]]
-  src = "img/2021/10/R-PI.jpg"
-  alt = "R-PI"
+  src = "img/2021/10/PODS.jpg"
+  alt = "PODS"
 
 +++
 
 # Introduction
 
-Of late, we did a AKS workshop and a team got stuck in deploying a simple HTML application and get the replica set working. It’s not a complex one! Let me walk through the steps to get this sorted. 
+Of late, we did a AKS workshop and a team got stuck in deploying a simple HTML application and get the home page working. It’s not a complex one! Let me walk through the steps to get this sorted. 
+
+{{< youtube B459V1rw2lk >}}
 
 ## Project Structure & Code
 
@@ -83,3 +85,10 @@ Accessing the public IP through the browser didn't give the expected result.
 
 Practically, there is no issue. Instead of your home.html the index.html is rendering. Because, that is the default index page. So, to access your home page navigate to http://PUBLICIP/HOME.HTML or overwrite the index file by renaming the home.html to index.html. Don't forget to update the same in Dockerfile. 
 
+### Replica Set
+
+Now, we need to get replica set sorted... Use the below YAML 
+
+```PowerShell
+
+```
