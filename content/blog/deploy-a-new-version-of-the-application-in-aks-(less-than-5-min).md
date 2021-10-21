@@ -15,8 +15,8 @@ categories = ["Azure" , "AKS"]
 
 In my previous [blog](https://about-powershell.com/blog/deploy-nginx-application-in-aks-in-5-min/), we described the pod deployment and exposing the app to the internet. Now, let me walk through the steps to release a new version of the application. We have two application versions in the Docker repository and they are listed below 
 
-1. (Version 1)[https://hub.docker.com/layers/173282206/chenv/collabrains-cloud/1.0.0/images/sha256-13340e9feca2d671f8fd47c11d5f4252144c75c10efb277715e77bf9650ded91?context=repo]
-2. (Version 2)[https://hub.docker.com/layers/173282070/chenv/collabrains-cloud/2.0.0/images/sha256-e7d89b5670ba756860f768e6fc675adc4ade3f0ded4a224f2e608d918d838288?context=repo]
+1. [Version 1](https://hub.docker.com/layers/173282206/chenv/collabrains-cloud/1.0.0/images/sha256-13340e9feca2d671f8fd47c11d5f4252144c75c10efb277715e77bf9650ded91?context=repo)
+2. [Version 2](https://hub.docker.com/layers/173282070/chenv/collabrains-cloud/2.0.0/images/sha256-e7d89b5670ba756860f768e6fc675adc4ade3f0ded4a224f2e608d918d838288?context=repo)
 
 {{< youtube 0F8m_FZ5kMw >}}
 
