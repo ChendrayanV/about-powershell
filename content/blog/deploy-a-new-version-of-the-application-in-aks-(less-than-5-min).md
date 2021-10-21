@@ -23,7 +23,7 @@ In my previous [blog](https://about-powershell.com/blog/deploy-nginx-application
 ## Steps (High Level)
 
 1.	Build an HTML static web application – Content is of your choice
-2.	Dockerise the application
+2.	Dockerize the application
 3.	Tag and publish to the Docker hub
 4.	Deploy the containerized application in the AKS
 5.	**Release a newer version of the application in the AKS**
