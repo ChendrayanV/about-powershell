@@ -28,6 +28,47 @@ In my previous [blog](https://about-powershell.com/blog/deploy-nginx-application
 4.	Deploy the containerized application in the AKS
 5.	**Release a newer version of the application in the AKS**
 
+### HTML Code & Dockerfile Content
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKS</title>
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Montserrat';
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <h3 style="text-align: center;">AKS | NGINX | VERSION </h3>
+    <hr>
+    <!-- <p style="text-align: center;">Application Version 1.0.0 | Docker tag 1.0.0</p>
+    <div data-role="cube" data-cells="10" data-margin="2"></div> -->
+    
+    <p style="text-align: center;">Application Version 2.0.0 | Docker tag 2.0.0</p>
+    <div data-role="cube" data-color="bg-cyan bd-darkCyan" data-flash-color="#aa00ff"></div>
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+</body>
+
+</html>
+```
+
+```Dockerfile
+FROM nginx
+
+COPY home.html /usr/share/nginx/html
+```
 
 ### Build & Tag (Version 1.0)
 
