@@ -1,6 +1,6 @@
 +++
 title = "Deploy NGINX application in AKS (Less than 5 min)"
-description = ""
+description = "Imperative approach..."
 author = "Chendrayan Venkatesan"
 date = "2021-10-21"
 tags = ["AKS","NGINX"]
