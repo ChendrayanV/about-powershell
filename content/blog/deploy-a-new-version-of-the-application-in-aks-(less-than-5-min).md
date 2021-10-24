@@ -111,3 +111,7 @@ PS C:\Projects\Collabrains.Cloud> kubectl expose deployment collabrains-cloud --
 ```PowerShell
 PS C:\Projects\Collabrains.Cloud> kubectl set image deployment/collabrains-cloud collabrains-cloud=chenv/collabrains-cloud:2.0.0 --record=true
 ```
+
+## Summary
+
+Awesome, now that we know the basics of Pods, updating deployments. There are lot more coming up in future, please feel free to subscribe to my YouTube channel - iAutomate and follow me on twitter [ChendrayanV](https://twitter.com/chendrayanv)
