@@ -2,7 +2,7 @@
 title = "Dry run of Replicas in Azure Kubernetes Service (less than 5 minutes)"
 description = "Imperative approach..."
 author = "Chendrayan Venkatesan"
-date = "2021-10-22"
+date = "2021-10-24"
 tags = ["AKS","NGINX"]
 categories = ["Azure" , "AKS"]
 [[images]]

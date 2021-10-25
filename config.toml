@@ -357,7 +357,7 @@ disableLanguages        = []
   googleplus            = ""
   # reddit                = "example"
   quora                 = ""
-  youtube               = ""
+  youtube               = "https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw"
   vimeo                 = ""
   # whatsapp              = "" # WhatsApp Number
     # WeChat and QQ need testing.
