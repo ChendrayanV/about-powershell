@@ -13,8 +13,6 @@ categories = ["Azure" , "AKS"]
 
 # Introduction
 
-{{< youtube fEDgqYC7cqs >}}
-
 In my previous blog posts, we have seen imperative approaches for creating pods, deployments, replica sets and exposing them to load balancer service. The links below are for your reference. 
 
 1. [DEPLOY NGINX APPLICATION IN AKS (LESS THAN 5 MIN)](https://about-powershell.com/blog/deploy-nginx-application-in-aks-in-5-min/)
@@ -224,6 +222,8 @@ PS C:\> kubectl apply -f .\manifest\create-service.yaml
 ## Credits
 
 [dfinke](https://github.com/dfinke/PowerShellMicroservice) - PowerShell Microservice is very helpful.
+
+{{< youtube fEDgqYC7cqs >}}
 
 ## Summary
 
