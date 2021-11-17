@@ -2,7 +2,7 @@
 title = "My First Experience with Azure Container Apps"
 description = "MS Graph API | Pode | PowerShell | PSHTML"
 author = "Chendrayan Venkatesan"
-date = "2021-10-21"
+date = "2021-11-17"
 tags = ["Azure","PowerShell","Serverless","Container-Apps",""]
 categories = ["Azure" , "Azure Container Apps"]
 [[images]]
@@ -19,9 +19,9 @@ categories = ["Azure" , "Azure Container Apps"]
 
 # Introduction
 
-Azure Container Apps is super catchy and won many hearts post the announcement in Microsoft Ignite 2021. This blog post walks you through the simple steps to deploy a PowerShell web application to read Microsoft 365 data using Graph API. 
+Azure Container Apps is a super catchy, fantastic serverless container service and won many hearts post the announcement in Microsoft Ignite 2021. This blog post walks you through the simple steps to deploy a PowerShell web application to read Microsoft 365 data using Graph API. 
 
-**Disclaimer:** My focus is well-balanced on both container apps and building a web app using the Pode PowerShell module. So, don’t expect the depth of container apps. 
+> Disclaimer: This is my first experience using the container app. So, only fundamentals are my focus.
 
 ## Tell about Azure Container Apps
 
@@ -262,3 +262,7 @@ return html -Content {
     }
 }
 ```
+
+### Sumarry
+
+Congratulations on running your first Azure Container Apps using PowerShell, Pode, PSHML, and Microsoft Graph API. There are a lot more coming up in the future, and please feel free to subscribe to my YouTube channel - iAutomate and follow me on Twitter [ChendrayanV](https://twitter.com/chendrayanv) 
