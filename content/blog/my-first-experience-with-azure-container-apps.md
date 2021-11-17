@@ -3,6 +3,7 @@ title = "My First Experience with Azure Container Apps"
 description = "MS Graph API | Pode | PowerShell | PSHTML"
 author = "Chendrayan Venkatesan"
 date = "2021-11-17"
+draft = "true"
 tags = ["Azure","PowerShell","Serverless","Container-Apps",""]
 categories = ["Azure" , "Azure Container Apps"]
 [[images]]
