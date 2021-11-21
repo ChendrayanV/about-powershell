@@ -42,7 +42,7 @@ Oh yeah! No more theory. Let us get on the action!
 
 ### Prerequisites
 
-1.	Pode. 
+1.	Pode and PSHTML modules. 
 2.	VSCode (or any IDE).
 3.	PowerShell 7.1.2 (6.0 + for Kestrel routing in Pode.)
 4.	Azure Account. 
