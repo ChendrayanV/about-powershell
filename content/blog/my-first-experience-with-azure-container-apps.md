@@ -1,10 +1,10 @@
 +++
 title = "My First Experience with Azure Container Apps"
-description = "MS Graph API | Pode | PowerShell | PSHTML"
+description = "Pode | PowerShell | PSHTML | Azure Container Apps"
 author = "Chendrayan Venkatesan"
 date = "2021-11-21"
 draft = "false"
-tags = ["Azure","PowerShell","Serverless","Container-Apps",""]
+tags = ["Azure","PowerShell","Serverless","Container-Apps"]
 categories = ["Azure" , "Azure Container Apps"]
 [[images]]
   src = "img/2021/11/Container-Apps.jpg"
