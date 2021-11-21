@@ -2,8 +2,8 @@
 title = "My First Experience with Azure Container Apps"
 description = "MS Graph API | Pode | PowerShell | PSHTML"
 author = "Chendrayan Venkatesan"
-date = "2021-11-17"
-draft = "true"
+date = "2021-11-21"
+draft = "false"
 tags = ["Azure","PowerShell","Serverless","Container-Apps",""]
 categories = ["Azure" , "Azure Container Apps"]
 [[images]]
@@ -15,12 +15,12 @@ categories = ["Azure" , "Azure Container Apps"]
 > Credits
 
 1. [Matthew Kelly](https://github.com/Badgerati) | Author of [Pode](https://github.com/Badgerati/Pode) PowerShell module. 
-2. Doug Finke - [PowerShell Microservice - Hello World](https://dfinke.github.io/powershell,%20docker,%20pode/2020/08/01/PowerShell-Microservice-Hello-World.html) 
+2. [PowerShell Microservice - Hello World](https://dfinke.github.io/powershell,%20docker,%20pode/2020/08/01/PowerShell-Microservice-Hello-World.html) by [Doug Finke](https://github.com/dfinke)
 3. [Stephane Van Gulick](https://github.com/Stephanevg) | Author of [PSHTML](https://github.com/Stephanevg/PSHTML) PowerShell module. 
 
 # Introduction
 
-Azure Container Apps is a super catchy, fantastic serverless container service and won many hearts post the announcement in Microsoft Ignite 2021. This blog post walks you through the simple steps to deploy a PowerShell web application to read Microsoft 365 data using Graph API. 
+Azure Container Apps is a super catchy, fantastic serverless container service and won many hearts post the announcement in Microsoft Ignite 2021. This blog post walks you through the simple steps to deploy a PowerShell web application to say hello world. 
 
 > Disclaimer: This is my first experience using the container app. So, only fundamentals are my focus.
 
@@ -56,7 +56,6 @@ Oh yeah! No more theory. Let us get on the action!
  ┣ 📂src  
  ┃ ┣ 📂views  
  ┃ ┃ ┣ 📜home.ps1  
- ┃ ┃ ┗ 📜index.ps1  
  ┃ ┣ 📜app.ps1  
  ┃ ┗ 📜Dockerfile  
  ┗ 📜readme.md  
@@ -64,206 +63,100 @@ Oh yeah! No more theory. Let us get on the action!
 ### App (Main File to Start the Server)
 
 ```PowerShell
-Start-PodeServer {
-    # Listen to port 3000 in localhost
-    Add-PodeEndpoint -Address * -Port 3000   -Protocol Http
-    
-    # Set the view engine (PSHTML)
+Start-PodeServer -Threads 2 {
+    Add-PodeEndpoint -Address * -Port 3000 -Protocol Http
     Set-PodeViewEngine -Type PSHTML -Extension PS1 -ScriptBlock {
         param($path, $data)
         return (. $path $data)
     }
-
-    # Index
     Add-PodeRoute -Method Get -Path '/' -ScriptBlock {
-        Write-PodeViewResponse -Path 'index.ps1'
-    }
-
-    # Login Route (OAuth)
-    Add-PodeRoute -Method Post -Path '/appoauth2' -ScriptBlock {
-        $Global:ClientId = $WebEvent.Data['client_id']
-        $Global:TenantId = $WebEvent.Data['tenant_id']
-        $Global:ClientSecret = $WebEvent.Data['client_secret']
-        $Body = @{    
-            Grant_Type    = "client_credentials"
-            Scope         = "https://graph.microsoft.com/.default"
-            client_Id     = $Global:ClientId
-            Client_Secret = $Global:ClientSecret
-        }
-        $ConnectGraph = Invoke-RestMethod -Uri "https://login.microsoftonline.com/$($Global:TenantId)/oauth2/v2.0/token" -Method POST -Body $Body
-        $Global:Headers = @{Authorization = "{0} {1}" -f ($ConnectGraph.token_type, $ConnectGraph.access_token) } 
-        $Response = [PSCustomObject]@{
-            Message    = "Success"
-            TokenType  = $($ConnectGraph.token_type)
-            StatusCode = $WebEvent.Response.StatusCode
-        }
-        Write-PodeJsonResponse -Value $($Response)
-    }
-
-    # Home Page
-    Add-PodeRoute -Method Get -Path '/home' -ScriptBlock {
         Write-PodeViewResponse -Path 'home.ps1'
     }
 }
 ```
 
-### Views | Login Page (Index.ps1)
+### Views | Login Page (Home.ps1)
 
 ```PowerShell
 param($data)
 
+function CustomCard {
+    Param (
+        $ImageSrc
+    )
+
+    Div -Class 'cell-lg-4' -Content {
+        Div -Class 'price-item text-center bg-white win-shadow' -Content {
+            Div -Class 'price-item-header p-6' -Content {
+                Div -Class 'img-container rounded' -Content {
+                    img -src $($ImageSrc)
+                    Div -Class 'image-overlay op-green' 
+                }
+            }
+        }
+    }
+}
 return html -Content {
     head -Content {
-        Title -Content "Reactor | Home"
+        Title -Content "Az Container Apps | Home"
         Link -href "https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css" -rel "stylesheet"
         script -src "https://cdn.metroui.org.ua/v4/js/metro.min.js"
     }
     body -Content {
-        # Menu Bar
-        Div -Class "container bg-blue fg-white pos-fixed fixed-top z-top" -Content {
-            header -Class "app-bar container bg-blue fg-white pos-relative" `
-                -Attributes @{'data-role' = 'appbar'; 'data-expand-point' = 'md' } -Content {
-                a -href "#" -Class "brand fg-white no-hover" -Content "REACTOR" -Target "_blank"
-                ul -Class "app-bar-menu ml-auto" -Content {
-                    li -Content { a -href "/about" -Content "About" }
-                    li -Content { a -href "/dashboard" -Content "Dashboard" }
-                    li -Content { a -href "/contact" -Content "Contact" }
-                    li -Content { a -href "/calendar-event" -Content "Book an Event" }
-                }
-            }
-        }
         (1..3).ForEach({ br })
         Div -Class 'container' -Content {
-            form -action "/appoauth2" -method "post" -enctype 'multipart/form-data' -content {
-                div -class 'form-group' -content {
-                    label -content 'Client Id'
-                    input -type 'text' -name 'client_id'
-                }
-                div -class 'form-group' -content {
-                    label -content 'Tenant Id'
-                    input -type 'password' -name 'tenant_id'
-                }
-                div -class 'form-group' -content {
-                    label -content 'Client Secret'
-                    input -type 'password' -name 'client_secret'
-                }
-                div -class 'form-group' -content {
-                    button -class 'button bg-blue outline rounded' -content 'Login'
-                }
+            h3 -Class 'Secondary fg-lightRed' -Content 'Work In Progress...' -Style 'text-align:center'
+            hr
+            Div -Class 'row flex-align-center rounded' -Content {
+                @(
+                    "https://media.istockphoto.com/photos/automation-industrial-business-process-workflow-optimisation-picture-id1280048451?b=1&k=20&m=1280048451&s=170667a&w=0&h=vPUK1jUkpkczueFaya2ZGdjDtNQKRo75f6yEzsXMY7A=",
+                    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29zdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+                    "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dGVhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                ).ForEach(
+                    {
+                        CustomCard -ImageSrc $($_)  
+                    }
+                )
+                
             }
+            hr 
         }
     }
 }
 ```
 
-### View | Home Page (Home.ps1)
+### Build and Push to DockerRegistry
+
+```Dockerfile
+FROM mcr.microsoft.com/powershell:latest
+
+WORKDIR /usr/src/app/
+
+COPY . .    
+
+RUN pwsh -c "Install-Module 'Pode', 'PSHTML' -Force -AllowClobber"
+
+CMD [ "pwsh", "-c", "cd /usr/src/app; ./app.ps1" ]
+```
+
+### Build and Push
 
 ```PowerShell
-param($data)
-
-return html -Content {
-    head -Content {
-        Title -Content "Reactor | Home"
-        Link -href "https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css" -rel "stylesheet"
-        script -src "https://cdn.metroui.org.ua/v4/js/metro.min.js"
-    }
-    body -Content {
-        # Menu Bar
-        $colors = @('blue' , 'green' , 'brown' , 'magenta' , 'orange')
-        $bgColor = $colors | Get-Random
-        Div -Class "container bg-$($bgColor) fg-white pos-fixed fixed-top z-top" -Content {
-            header -Class "app-bar container bg-$($bgColor) fg-white pos-relative" `
-                -Attributes @{'data-role' = 'appbar'; 'data-expand-point' = 'md' } -Content {
-                a -href "#" -Class "brand fg-white no-hover" -Content "REACTOR" -Target "_blank"
-                ul -Class "app-bar-menu ml-auto" -Content {
-                    li -Content { a -href "/about" -Content "About" }
-                    li -Content { a -href "/dashboard" -Content "Dashboard" }
-                    li -Content { a -href "/contact" -Content "Contact" }
-                    li -Content { a -href "/calendar-event" -Content "Book an Event" }
-                }
-            }
-        }
-        (1..2).ForEach({ br })
-        Div -Class 'container' -Content {
-            '<div data-role="countdown" data-days="1"></div>'
-            h5 -content "Your Day look awesome..."
-            table -Class "table striped" -Content {
-                thead -Content {
-                    tr -content {
-                        th -Content "Organizer"
-                        th -Content "Subject"
-                        th -content "Sensitivity" 
-                        th -content "Start(UTC)"
-                        th -Content "LocalTime"
-                    }
-                }
-                tbody -Content {
-                    $MgUserCalendar = Invoke-RestMethod -Uri 'https://graph.microsoft.com/v1.0/users/18804ea8-1129-4996-8fba-a253d2574122/calendar' -Headers $Headers
-                    $MgUserCalendarEvents = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/users/18804ea8-1129-4996-8fba-a253d2574122/calendars/$($MgUserCalendar.Id)/events" -Headers $Headers 
-                    foreach ($MgUserCalendarEvent in $MgUserCalendarEvents.value) {
-                        tr -content {
-                            if ((([DateTime]($($MgUserCalendarEvent.Start).DateTime))).Where({ $_.Date -eq ([datetime]::UtcNow.Date) })) {
-                                td -Content {
-                                    $($MgUserCalendarEvent.Organizer.EmailAddress.Name)
-                                }
-                                td -Content {
-                                    $($MgUserCalendarEvent.Subject)
-                                }
-                                td -Content {
-                                    $($MgUserCalendarEvent.Sensitivity)
-                                }
-                                
-                                td -Content {
-                                    (([DateTime]($($MgUserCalendarEvent.Start).DateTime))).Where({ $_.Date -eq ([datetime]::UtcNow.Date) })
-                                }
-                                td -Content {
-                                    (Get-Date).ToShortTimeString()
-                                }
-                                
-                            }
-                        }
-                    }
-                }
-            } 
-            
-        }
-        hr
-        # (1..2).Foreach({ br })
-        Div -Class 'container' -Content {
-            h5 -Content "Your action please..."
-
-            $collection = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/users/18804ea8-1129-4996-8fba-a253d2574122/messages?`$filter=importance eq 'high' and isRead eq false" -Headers $Headers
-            foreach ($item in $collection.value) {
-                Div -class "remark alert" -content {
-                    $item.subject
-                    br
-                    $item.Sender.EmailAddress.Name
-                }
-            }
-        }
-        (1..2).ForEach({ br })
-        Div -Class 'container' -Content {
-            h5 -Content 'User Information'
-            Div -Attributes @{"data-role" = "accordion"; "data-one-frame" = "true"; "data-show-active" = "true" } -Content {
-                $Users = Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/users" -Headers $Global:Headers
-                foreach ($User in $Users.value) {
-                    Div -Class 'frame' -Content {
-                        Div -Class 'heading' -Content $($User.displayName)
-                        Div -Class 'content' -Content {
-                            Div -Class 'p-2' -Content {
-                                $User.jobTitle
-                                br 
-                                b -Content $User.mobilePhone
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+PS C:\reactor> docker build -t chenv/reactor:V1.0.0 .
+PS C:\reactor> docker push chenv/reactor:V1.0.0
 ```
 
-### Sumarry
+### Create Container Apps & Deploy 
+
+{{< youtube MvfzFCKSphk >}}
+
+
+### References
+
+1. [Pode](https://github.com/Badgerati/Pode)
+2. [PSHTML](https://github.com/Stephanevg/PSHTML)
+3. [Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/)
+
+### Summary
 
 Congratulations on running your first Azure Container Apps using PowerShell, Pode, PSHML, and Microsoft Graph API. There are a lot more coming up in the future, and please feel free to subscribe to my YouTube channel - iAutomate and follow me on Twitter [ChendrayanV](https://twitter.com/chendrayanv) 
