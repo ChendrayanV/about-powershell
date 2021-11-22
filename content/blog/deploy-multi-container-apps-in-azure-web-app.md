@@ -3,7 +3,7 @@ title = "Deploy multi-container apps in Azure web app"
 description = "Pode | PowerShell | PSHTML | Azure Web App"
 author = "Chendrayan Venkatesan"
 date = "2021-11-22"
-draft = "false"
+draft = "true"
 tags = ["Azure","PowerShell","Serverless","Container-Apps"]
 categories = ["Azure" , "Azure Web Apps", "Docker Compose" , "Multi-Container-Apps"]
 [[images]]
@@ -33,19 +33,19 @@ In my previous blog posts, a single container is in use for the demo. Using a mu
 
 ## Project Folder Structure
 
-📦Collabrains.Cloud
- ┣ 📂application
- ┃ ┣ 📂views
- ┃ ┃ ┗ 📜index.ps1
- ┃ ┣ 📜app.ps1
- ┃ ┗ 📜Dockerfile
- ┣ 📂products
- ┃ ┣ 📂routes
- ┃ ┃ ┗ 📜products.ps1
- ┃ ┣ 📜Dockerfile
- ┃ ┗ 📜server.ps1
- ┣ 📜docker-compose.yml
- ┗ 📜readme.md
+📦Collabrains.Cloud  
+ ┣ 📂application  
+ ┃ ┣ 📂views  
+ ┃ ┃ ┗ 📜index.ps1  
+ ┃ ┣ 📜app.ps1  
+ ┃ ┗ 📜Dockerfile  
+ ┣ 📂products  
+ ┃ ┣ 📂routes  
+ ┃ ┃ ┗ 📜products.ps1  
+ ┃ ┣ 📜Dockerfile  
+ ┃ ┗ 📜server.ps1  
+ ┣ 📜docker-compose.yml  
+ ┗ 📜readme.md  
 
 
 
