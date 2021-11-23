@@ -2,8 +2,8 @@
 title = "Deploy multi-container apps in Azure web app"
 description = "Pode | PowerShell | PSHTML | Azure Web App"
 author = "Chendrayan Venkatesan"
-date = "2021-11-22"
-draft = "true"
+date = "2021-11-23"
+draft = "false"
 tags = ["Azure","PowerShell","Serverless","Container-Apps"]
 categories = ["Azure" , "Azure Web Apps", "Docker Compose" , "Multi-Container-Apps"]
 [[images]]
