@@ -7,7 +7,7 @@ draft = "true"
 tags = ["Azure","PowerShell","Serverless","Container-Apps"]
 categories = ["Azure" , "Azure Web Apps", "Docker Compose" , "Multi-Container-Apps"]
 [[images]]
-  src = "img/2021/11/Multi-Container.jpg"
+  src = "img/2021/11/spices-multi-container.jpg"
   alt = "CONTAINER-APPS"
 
 +++
@@ -195,9 +195,13 @@ CMD [ "pwsh", "-c", "cd /usr/src/server; ./server.ps1" ]
 
 ## Get on Action
 
-{{< youtube  >}}
+{{< youtube jC23hgGkdIM >}}
 
 ## References
 
 1. [Multi-Container-Apps](https://docs.docker.com/get-started/07_multi_container/)
 2. [Using Docker Compose](https://docs.docker.com/get-started/08_using_compose/)
+
+## Summary
+
+Awesome, you have a PowerShell web-application up & running in Azure webn app as a Docker container. There are lot more coming up in future, please feel free to subscribe to my YouTube channel - [iAutomate](https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw) and follow me on twitter [ChendrayanV](https://twitter.com/chendrayanv)
