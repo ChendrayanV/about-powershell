@@ -18,6 +18,10 @@ In my previous blog post, we got basic information about the Azure Container App
 
 *While following the steps shared by Thorsten Hans, I see an issue in the listKeys() function. So, I slightly modified the code as illustrated below, and it is modularized for easy readability.*
 
+```PowerShell
+listKeys(law.id,law.apiVersion).primarySharedKey
+```
+
 ## Bicep Template 
 
 ### Parameters
