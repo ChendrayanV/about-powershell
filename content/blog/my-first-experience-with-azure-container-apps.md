@@ -159,4 +159,4 @@ PS C:\reactor> docker push chenv/reactor:V1.0.0
 
 ### Summary
 
-Congratulations on running your first Azure Container Apps using PowerShell, Pode, PSHML, and Microsoft Graph API. There are a lot more coming up in the future, and please feel free to subscribe to my YouTube channel - iAutomate and follow me on Twitter [ChendrayanV](https://twitter.com/chendrayanv) 
+Congratulations on running your first Azure Container Apps using PowerShell, Pode and PSHML. There are a lot more coming up in the future, and please feel free to subscribe to my YouTube channel - [iAutomate](https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw) and follow me on Twitter [ChendrayanV](https://twitter.com/chendrayanv) 
