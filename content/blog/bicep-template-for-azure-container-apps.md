@@ -106,13 +106,13 @@ CMD [ "pwsh", "-c", "cd /usr/src/app; ./app.ps1" ]
 
 > Docker Image is available [here](https://hub.docker.com/repository/docker/chenv/collabrains.cloud) and you can develop and replace app.ps1
 
-📦Collabrains.Cloud
- ┣ 📂application
- ┃ ┣ 📂views
- ┃ ┃ ┗ 📜index.ps1
- ┃ ┣ 📜app.ps1
- ┃ ┗ 📜Dockerfile
- ┗ 📜readme.md
+📦Collabrains.Cloud  
+ ┣ 📂application  
+ ┃ ┣ 📂views  
+ ┃ ┃ ┗ 📜index.ps1  
+ ┃ ┣ 📜app.ps1  
+ ┃ ┗ 📜Dockerfile  
+ ┗ 📜readme.md  
 
 ### Application (app.ps1)
 
