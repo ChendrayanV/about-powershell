@@ -182,6 +182,10 @@ return html -Content {
 }
 ```
 
+## Get On Action
+
+{{< youtube tcFBzkf3hLo >}}
+
 ## Summary
 
 Congratulations on running your Azure Container Apps using PowerShell, Pode and PSHML. There are a lot more coming up in the future, and please feel free to subscribe to my YouTube channel - [iAutomate](https://www.youtube.com/channel/UC22S6qPibfs1xa3MIII0JNw) and follow me on Twitter [ChendrayanV](https://twitter.com/chendrayanv) 
