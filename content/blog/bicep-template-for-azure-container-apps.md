@@ -7,7 +7,7 @@ date = "2021-11-26"
 tags = ["Container Apps","Bicep"]
 categories = ["Bicep" , "Azure-Container-Apps"]
 [[images]]
-  src = "img/2021/11/bicep-container-app.jpg"
+  src = "img/2021/11/bicep-container-app.jpeg"
   alt = "Container-Apps"
 
 +++
