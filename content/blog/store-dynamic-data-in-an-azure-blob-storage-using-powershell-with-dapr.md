@@ -45,7 +45,7 @@ spec:
 Start-PodeServer {
     Add-PodeEndpoint -Address * -Port 3000 -Protocol Http 
     Add-PodeRoute -Method Get -Path '/bloboutput' -ScriptBlock {
-        $Bytes = [System.Text.Encoding]::Unicode.GetBytes("Chendrayan Venkatesan")
+        $Bytes = [System.Text.Encoding]::Unicode.GetBytes("Hello, World!")
         $EncodedText = [Convert]::ToBase64String($Bytes)
         $body = [PSCustomObject]@{
             operation = 'create'
