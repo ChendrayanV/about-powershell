@@ -22,8 +22,7 @@ The detailed documentation on the Azure Blob Storage binding component is super 
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
-  name: <NAME>
-  namespace: <NAMESPACE>
+  name: bloboutput
 spec:
   type: bindings.azure.blobstorage
   version: v1
