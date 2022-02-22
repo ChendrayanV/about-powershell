@@ -14,7 +14,7 @@ categories = ["Bicep" , "Azure-Container-Apps"]
 
 # Introduction
 
-The detailed documentation on the Azure Blob Storage binding component is super helpful. With that reference, let me walk you through the steps to store dynamic data to Azure blob storage without writing additional code (using blob API) to interact with the blob. Instead, we use the Dapr binding API. 
+The detailed [documentation](https://docs.dapr.io/reference/components-reference/supported-bindings/blobstorage/) on the Azure Blob Storage binding component is super helpful. With that reference, let me walk you through the steps to store dynamic data to Azure blob storage without writing additional code (using blob API) to interact with the blob. Instead, we use the Dapr binding API. 
 
 ## Binding Component Format
 
