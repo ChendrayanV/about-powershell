@@ -76,7 +76,7 @@ PS C:\> Invoke-RestMethod -Uri 'http://localhost:3000/bloboutput'
 
 > Hey, wait! Data we store in the blob is not dynamic! I see hello, world content in the blob for every execution. Yes, you are right! Let us modify the app.ps1 to store the dynamic content. 
 
-## Build a web server (Static Blob Content) - app.ps1
+## Build a web server (Dynamic Blob Content) - app.ps1
 
 ```PowerShell
 Start-PodeServer {
