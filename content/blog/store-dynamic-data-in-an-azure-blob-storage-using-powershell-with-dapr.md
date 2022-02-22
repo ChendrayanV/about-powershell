@@ -39,7 +39,7 @@ spec:
     value: 3
 ```
 
-## Build and run a web server 
+## Build a web server (Static Blob Content) - app.ps1
 
 ```PowerShell
 Start-PodeServer {
@@ -67,3 +67,48 @@ Start-PodeServer {
 ```PowerShell
 PS C:\> dapr run --app-id outputblob --app-port 3000 --dapr-http-port 3500 --dapr-grpc-port 60002 --components-path .\components\ -- pwsh .\output-binding\app.ps1
 ```
+
+## Invoke the REST API
+
+```PowerShell
+PS C:\> Invoke-RestMethod -Uri 'http://localhost:3000/bloboutput' 
+```
+
+> Hey, wait! Data we store in the blob is not dynamic! I see hello, world content in the blob for every execution. Yes, you are right! Let us modify the app.ps1 to store the dynamic content. 
+
+## Build a web server (Static Blob Content) - app.ps1
+
+```PowerShell
+Start-PodeServer {
+    Add-PodeEndpoint -Address * -Port 3000 -Protocol Http 
+    Add-PodeRoute -Method Post -Path '/bloboutput' -ScriptBlock {
+        $Bytes = [System.Text.Encoding]::Unicode.GetBytes($($WebEvent.Request.Body))
+        $EncodedText = [Convert]::ToBase64String($Bytes)
+        $body = [PSCustomObject]@{
+            operation = 'create'
+            data      = $($EncodedText)
+            metadata  = [PSCustomObject]@{
+                blobName = 'name.txt'
+            }
+        } | ConvertTo-Json -Compress
+        Invoke-RestMethod -Uri 'http://localhost:3500/v1.0/bindings/bloboutput' `
+            -Method Post `
+            -Body $body `
+            -ContentType 'application/json'
+    }
+} -DisableTermination
+```
+
+***$Bytes = [System.Text.Encoding]::Unicode.GetBytes($($WebEvent.Request.Body))*** is the trick to get dynamic contents. 
+
+```PowerShell 
+$Data = [pscustomobject]@{
+    Name     = 'Chen'
+    Location = 'Bangalore'
+} | ConvertTo-Json -Compress
+Invoke-RestMethod -Uri 'http://localhost:3000/bloboutput' -Body $($Data) -Method Post -ContentType 'application/json'
+```
+
+### Output 
+
+Access the storage blob! You should see the content 😊 
