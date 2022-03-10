@@ -18,7 +18,7 @@ A colleague of mine wasn’t happy with the manual solution that probes the Azur
 
 ***I promise to share the 100% production-ready DevOps steps to deploy Azure Functions in my upcoming blogs and vlogs. If you aren’t aware of my youtube channel, [here](https://www.youtube.com/c/iAutomate) it is!*** 
 
-{{ < youtube BrEgBBBCLGA >}}
+{{< youtube BrEgBBBCLGA >}}
 
 ## Bicep Template
 
