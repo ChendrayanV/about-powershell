@@ -1,14 +1,16 @@
 # For a description of these parameters, please visit the theme wiki.
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
-baseurl                 = "https://about-powershell.com"
-DefaultContentLanguage  = "en"
-title                   = "iAutomate"
-theme                   = "hugo-future-imperfect-slim"
-paginate                = 3
-disqusShortname         = ""
-googleAnalytics         = ""
-pluralizeListTitles     = false
-disableLanguages        = []
+# baseurl                 = "https://about-powershell.com"
+baseurl                   = "/"
+canonifyURLs              = false
+DefaultContentLanguage    = "en"
+title                     = "iAutomate"
+theme                     = "hugo-future-imperfect-slim"
+paginate                  = 3
+disqusShortname           = ""
+googleAnalytics           = ""
+pluralizeListTitles       = false
+disableLanguages          = []
 
 [markup.goldmark.renderer]
   unsafe                = true
