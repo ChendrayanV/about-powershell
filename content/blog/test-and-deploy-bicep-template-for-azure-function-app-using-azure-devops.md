@@ -20,7 +20,7 @@ I have a bunch of bicep codes. What should I test? Where should I start? Without
 
 Hey, no doubt! I use the same template with minor modifications that meet my goals. The below image depicts the flow 
 
-![Stages](https://github.com/ChendrayanV/about-powershell/blob/main/static/img/2022/03/Stages.png)
+![Stages](https://raw.githubusercontent.com/ChendrayanV/about-powershell/main/static/img/2022/03/Stages.png)
 
 ## Stages
 
