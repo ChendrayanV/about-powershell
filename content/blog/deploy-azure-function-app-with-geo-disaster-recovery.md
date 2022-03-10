@@ -1,6 +1,6 @@
 +++
 title = "Deploy Azure Function App with Geo Disaster Recovery"
-description = "Active / Active"
+description = "take diversion..."
 author = "Chendrayan Venkatesan"
 draft = "false"
 date = "2022-03-10"
