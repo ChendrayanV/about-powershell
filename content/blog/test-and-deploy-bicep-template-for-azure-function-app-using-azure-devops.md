@@ -2,7 +2,7 @@
 title = "Test and Deploy Bicep Template for Azure Function App using Azure DevOps"
 description = "first leg in Azure DevOps..."
 author = "Chendrayan Venkatesan"
-draft = "false"
+draft = "true"
 date = "2022-03-10"
 tags = ["Azure Front Door", "Serverless Compute" , "Azure Function"]
 categories = ["Azure-Functions"]
@@ -20,8 +20,7 @@ I have a bunch of bicep codes. What should I test? Where should I start? Without
 
 Hey, no doubt! I use the same template with minor modifications that meet my goals. The below image depicts the flow 
 
-![Stages](static/img/2022/03/Stages.png)
-![Stages](static\img\2022\03\Stages.png)
+
 
 ## Stages
 
