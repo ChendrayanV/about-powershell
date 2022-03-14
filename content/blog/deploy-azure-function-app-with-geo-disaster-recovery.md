@@ -20,22 +20,22 @@ A colleague of mine wasn’t happy with the manual solution that probes the Azur
 
 ## Project Structure (Foundation)
 
-📦automata
- ┣ 📂scripts
- ┃ ┣ 📜createfrontdoor.ps1
- ┃ ┗ 📜deploy.ps1
- ┣ 📂template
- ┃ ┣ 📂modules
- ┃ ┃ ┣ 📂appinsight
- ┃ ┃ ┃ ┗ 📜appinsight.bicep
- ┃ ┃ ┣ 📂appserviceplan
- ┃ ┃ ┃ ┗ 📜appserviceplan.bicep
- ┃ ┃ ┣ 📂functionapp
- ┃ ┃ ┃ ┗ 📜functionapp.bicep
- ┃ ┃ ┗ 📂storageaccount
- ┃ ┃ ┃ ┗ 📜storageaccount.bicep
- ┃ ┗ 📜main.bicep
- ┗ 📜README.md
+📦automata  
+ ┣ 📂scripts  
+ ┃ ┣ 📜createfrontdoor.ps1  
+ ┃ ┗ 📜deploy.ps1  
+ ┣ 📂template  
+ ┃ ┣ 📂modules  
+ ┃ ┃ ┣ 📂appinsight  
+ ┃ ┃ ┃ ┗ 📜appinsight.bicep  
+ ┃ ┃ ┣ 📂appserviceplan  
+ ┃ ┃ ┃ ┗ 📜appserviceplan.bicep  
+ ┃ ┃ ┣ 📂functionapp  
+ ┃ ┃ ┃ ┗ 📜functionapp.bicep  
+ ┃ ┃ ┗ 📂storageaccount  
+ ┃ ┃ ┃ ┗ 📜storageaccount.bicep  
+ ┃ ┗ 📜main.bicep  
+ ┗ 📜README.md  
 
 {{< youtube BrEgBBBCLGA >}}
 
