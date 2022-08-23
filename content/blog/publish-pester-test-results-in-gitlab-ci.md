@@ -92,6 +92,8 @@ Describe 'PowerShell.GitLab.Utility' {
 
 ![Outcome](/img/PSSA.png)
 
+![Outcome](/img/PSSA-1.png)
+
 ## Summary
 
 This blog post is just a start-over. I got a plan to release weekly blogs on GitLab to develop, test, and release PowerShell modules. Stay tuned! 
