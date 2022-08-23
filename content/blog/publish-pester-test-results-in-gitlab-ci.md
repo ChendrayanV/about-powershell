@@ -82,7 +82,11 @@ Describe 'PowerShell.GitLab.Utility' {
 
 ## Outcome 
 
-![Outcome](/static/img/2022/08/Outcome.png)
+![Outcome](/img/Outcome.png)
+
+## Outcome 
+
+![Outcome](/images/Outcome.png)
 
 ## Summary
 
