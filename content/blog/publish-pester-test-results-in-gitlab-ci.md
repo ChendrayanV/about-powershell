@@ -70,6 +70,10 @@ Describe 'PowerShell.GitLab.Utility' {
         Connect-GitLab -Organization $($Organization) -PAT $($PAT)
     }
     
+    It "PowerShell Script Analyzer" {
+        (Invoke-ScriptAnalyzer -Path .\tests -Recurse -Severity Error).Count | Should -BeExactly 0
+    }
+
     It "Cmdlet Count" {
         (Get-Command -Module powershell.gitlab.utility).count  | Should -BeExactly 3
     }
@@ -83,6 +87,10 @@ Describe 'PowerShell.GitLab.Utility' {
 ## Outcome 
 
 ![Outcome](/img/Outcome.png)
+
+## PowerShell Script Analyzer (For Reference)
+
+![Outcome](/img/PSSA.png)
 
 ## Summary
 
