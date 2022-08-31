@@ -28,7 +28,8 @@ Both have their pros and cons. Hold on! We aren't here to talk about mono versus
 
 ## Requirement 
 
-- We have 10+ folders, and each has microservice applications source code.
+- We have 10+ folders, and each has microservice applications source code. 
+- Team may add 20 more projects to the mono repository. 
 - We need a pipeline to run based on the change in the folder or folders.
 - All the folders follow the same structure. 
 
@@ -126,7 +127,7 @@ stages:
 
 ```
 
-> The newline is for proper spacing to meet YAML schema (GitLab)
+> The newline is for proper spacing to meet YAML schema (GitLab). For now, don't change the indentation in script.ps1.
 
 ## Credits
 
