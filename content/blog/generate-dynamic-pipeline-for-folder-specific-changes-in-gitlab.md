@@ -59,7 +59,7 @@ For our demo, I created the project structure as illustrated below
 
  A change in AzDo should run a job for AzDo and not for other folders. 
 
- ![Requirement](img/Requitement.png)
+ ![Requirement](/img/Requitement.png)
 
  ```YAMl (.gitlab-ci.yml)
 stages:
