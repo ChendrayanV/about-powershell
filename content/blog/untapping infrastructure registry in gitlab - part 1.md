@@ -19,9 +19,9 @@ Yesterday I spent a few hours in Infrastructure Registry for my learning. Oh, we
 ## Prerequisites
 
 - Azure Account. 
-    - Refer here for free access (12 Months) 
+    - Refer [here](https://azure.microsoft.com/en-gb/free/) for free access (12 Months) 
 - GitLab Account. 
-    - Set up your own GitLab instance
+    - [Set up your own GitLab instance](https://about.gitlab.com/free-trial/)
 
 ## Requirement
 
@@ -85,9 +85,9 @@ PS C:\repos\azurerm> git push -u origin master
 
 A distributable module is ready for use across the organization after successfully executing the pipeline. 
 
-![Output](Infrastructure-Registry-01.png) 
+![Output](/img/Infrastructure-Registry-01.png) 
 
-![Output](Infrastructure-Registry-02.png)
+![Output](/img/Infrastructure-Registry-02.png)
 
 Step 3: Consume the Module (Any Project in GitLab instance)
 
@@ -121,7 +121,7 @@ before_script:
 
 ## Output
 
-![Output](Infrastructure-Registry-03.png)
+![Output](/img/Infrastructure-Registry-03.png)
 
 
 ## What's next? 
